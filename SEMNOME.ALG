@@ -1,9 +1,13 @@
 Algoritmo "semnome"
 
 Var
-   op,opl,opa,opb,qtde: inteiro
-   valor: real
-   ac_vl : real
+   op,opl,opa,opb,qtde : inteiro
+   vla : real
+   vac : real
+   vbe : real
+   ac_vla : real
+   ac_vac : real
+   ac_vbe : real
 
 Inicio
    repita
@@ -26,16 +30,17 @@ Inicio
 
                escreval ("====================================")
                escreval ("LANCHE")
-               escreval ("1. NOME DO LANCHE : 3,00")
-               escreval ("2. NOME DO LANCHE : 8,00")
-               escreval ("3. NOME DO LANCHE : 5,00")
-               escreval ("4. NOME DO LANCHE : 0,00")
-               escreval ("5. NOME DO LANCHE : 0,00")
-               escreval ("6. NOME DO LANCHE : 0,00")
-               escreval ("7. NOME DO LANCHE : 0,00")
+               escreval ("1. HOT DOG : 14,00")
+               escreval ("2. BIG HOT DOG : 19,00")
+               escreval ("3. X-BACON : 24,00")
+               escreval ("4. X-SALADA : 20,00")
+               escreval ("5. X-TUDO : 25,00")
+               escreval ("6. X-BORGUER : 17,00")
+               escreval ("7. X-FRANGO : 28,00")
+               escreval ("8. A MODA DA CASA : 34,00")
                escreval ("0. VOLTAR AO MENU PRINCIPAL")
                escreval ("====================================")
-               escreva("Digite a opção: ")
+               escreva("Digite sua opção: ")
                leia(opl)
                limpatela
 
@@ -43,22 +48,50 @@ Inicio
                   caso 1
                   escreva("Digite a quantidade: ")
                   leia(qtde)
-                  valor <- qtde * 3.00
+                  valor <- qtde * 14.00
                   
                   caso 2
                   escreva("Digite a quantidade: ")
                   leia(qtde)
-                  valor <- qtde * 8.00
+                  valor <- qtde * 19.00
 
                   caso 3
                   escreva("Digite a quantidade: ")
                   leia(qtde)
-                  valor <- qtde * 5.00
+                  valor <- qtde * 24.00
+                  
+                  caso 4
+                  escreva("Digite a quantidade: ")
+                  leia(qtde)
+                  valor <- qtde * 20.00
+                  
+                  caso 5
+                  escreva("Digite a quantidade: ")
+                  leia(qtde)
+                  valor <- qtde * 25.00
+                  
+                  caso 6
+                  escreva("Digite a quantidade: ")
+                  leia(qtde)
+                  valor <- qtde * 17.00
+                  
+                  caso 7
+                  escreva("Digite a quantidade: ")
+                  leia(qtde)
+                  valor <- qtde * 28.00
+                  
+                  caso 8
+                  escreva("Digite a quantidade: ")
+                  leia(qtde)
+                  valor <- qtde * 34.00
 
                   outrocaso
-                     se(opl<0) ou (opl>7) entao
+                     se(opl<0) ou (opl>8) entao
                         escreval("Opção invalida")
                      fimse
+         caso 2
+         
+
                   
                fimescolha
 
