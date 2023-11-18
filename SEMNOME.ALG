@@ -1,7 +1,267 @@
 Algoritmo "semnome"
+// Disciplina   : FUNDAMENTOS DE PROGRAMAÇÃO DE COMPUTADORES
+// Professor    : Andre Luis Silva de Paula
+// Aluna        : Cristina Maia de Faria
+// RA           : 5112928
+
+procedimento menuPrincipal()
+var
+
+inicio
+   escreval ("====================================")
+   escreval ("MENU PRINCIPA")
+   escreval ("1. LANCHE")
+   escreval ("2. ACOMPANHAMENTO")
+   escreval ("3. BEBIDAS")
+   escreval ("0. SAIR")
+   escreval ("====================================")
+   escreva  ("Digite a opção desejada: ")
+   leia(op)
+
+   limpatela
+
+fimprocedimento
+
+procedimento menuLanche
+var
+
+inicio
+   repita
+
+      escreval ("====================================")
+      escreval ("LANCHE")
+      escreval ("1. CACHORRO QUENTE : 14,00")
+      escreval ("2. BIG CACHORRO QUENTE : 19,00")
+      escreval ("3. X-BACON : 24,00")
+      escreval ("4. X-SALADA : 20,00")
+      escreval ("5. X-TUDO : 25,00")
+      escreval ("6. X-BORGUER : 17,00")
+      escreval ("7. X-FRANGO : 28,00")
+      escreval ("8. A MODA DA CASA : 34,00")
+      escreval ("0. VOLTAR AO MENU PRINCIPAL")
+      escreval ("====================================")
+      escreva  ("Digite a sua opção: ")
+      leia(opl)
+      limpatela
+
+      escolha(opl)
+      caso 1
+         escreva("Digite a quantidade: ")
+         leia(qtde)
+         vla <- qtde * 14,00
+
+      caso 2
+         escreva("Digite a quantidade: ")
+         leia(qtde)
+         vla <- qtde * 19,00
+
+      caso 3
+         escreva("Digite a quantidade: ")
+         leia(qtde)
+         vla <- qtde * 24,00
+
+      caso 4
+         escreva("Digite a quantidade: ")
+         leia(qtde)
+         vla <- qtde * 20,00
+
+      caso 5
+         escreva("Digite a quantidade: ")
+         leia(qtde)
+         vla <- qtde * 25,00
+
+      caso 6
+         escreva("Digite a quantidade: ")
+         leia(qtde)
+         vla <- qtde * 17,00
+
+      caso 7
+         escreva("Digite a quantidade: ")
+         leia(qtde)
+         vla <- qtde * 28,00
+
+      caso 8
+         escreva("Digite a quantidade: ")
+         leia(qtde)
+         vla <- qtde * 34,00
+
+      outrocaso
+         se(opl<0) ou (opl>8) entao
+            escreval("Opção invalida")
+         fimse
+
+      fimescolha
+
+      limpatela
+
+      se (opl <> 0) entao
+         ac_vla <- ac_vla + vla
+      fimse
+
+   ate (opl = 0)
+
+
+
+fimprocedimento
+
+procedimento menuAcompanhamento
+var
+
+inicio
+   repita
+
+      escreval ("====================================")
+      escreval ("ACOMPANHAMENTO")
+      escreval ("1. BATATA FRITA : 12,00")
+      escreval ("2. BATATA FRITA COM CHEDDAR : 18,00")
+      escreval ("3. ANÉIS DE CEBOLA EMPANADO : 10,00")
+      escreval ("4. BATATA ONDA : 15,00")
+      escreval ("5. NACHOS : 20,00")
+      escreval ("6. VINAGRETE : 6,00")
+      escreval ("7. MINI STEAK : 12,00")
+      escreval ("====================================")
+      escreval ("Digite a sua opção: ")
+      leia (opa)
+      limpatela
+
+      escolha (opa)
+      caso 1
+         escreva("Digite a quantidade: ")
+         leia(qtde)
+         vac <- qtde * 12,00
+
+      caso 2
+         escreva("Digite a quantidade: ")
+         leia(qtde)
+         vac <- qtde * 18,00
+
+      caso 3
+         escreva("Digite a quantidade: ")
+         leia(qtde)
+         vac <- qtde * 10,00
+
+      caso 4
+         escreva("Digite a quantidade: ")
+         leia(qtde)
+         vac <- qtde * 15,00
+
+      caso 5
+         escreva("Digite a quantidade: ")
+         leia(qtde)
+         vac <- qtde * 20,00
+
+      caso 6
+         escreva("Digite a quantidade: ")
+         leia(qtde)
+         vac <- qtde * 6,00
+
+      caso 7
+         escreva("Digite a quantidade: ")
+         leia(qtde)
+         vac <- qtde * 12,00
+
+      outrocaso
+         se(opa<0) ou (opa>7) entao
+            escreval("Opção invalida")
+         fimse
+
+      fimescolha
+
+      limpatela
+
+      se (opa <> 0) entao
+         ac_vac <- ac_vac + vac
+      fimse
+
+   ate (opa = 0)
+
+
+
+fimprocedimento
+
+procedimento menuBebida
+var
+   opb:inteiro
+inicio
+   repita
+
+      escreval ("====================================")
+      escreval ("BEBIDA")
+      escreval ("1. GUARANÁ MINEIRO : 5,00")
+      escreval ("2. FANTA-LARANJA : 5,00")
+      escreval ("3. GUARANÁ ANTARCTICA : 5,00")
+      escreval ("4. SPRITE : 5,00")
+      escreval ("5. ÁGUA SEM GÁS CRYSTAL : 3,00")
+      escreval ("6. SUCO SPRES LARNAJA : 4,00")
+      escreval ("7. COCA-COLA : 5,00")
+      escreval ("8. ÁGUA COM GÁS CRYSTAL: 3,00")
+      escreval ("====================================")
+      escreval ("Digite a sua opção: ")
+      leia (opb)
+      limpatela
+
+      escolha (opb)
+      caso 1
+         escreva ("Digite a quantidade: ")
+         leia (qtde)
+         vbe <- qtde * 5,00
+
+      caso 2
+         escreval ("Digite a qunatidade: ")
+         leia (qtde)
+         vbe <- qtde * 5,00
+
+      caso 3
+         escreval ("Digite a qunatidade: ")
+         leia (qtde)
+         vbe <- qtde * 5,00
+
+      caso 4
+         escreval ("Digite a qunatidade: ")
+         leia (qtde)
+         vbe <- qtde * 5,00
+
+      caso 5
+         escreval ("Digite a qunatidade: ")
+         leia (qtde)
+         vbe <- qtde * 3,00
+
+      caso 6
+         escreval ("Digite a qunatidade: ")
+         leia (qtde)
+         vbe <- qtde * 4,00
+
+      caso 7
+         escreval ("Digite a qunatidade: ")
+         leia (qtde)
+         vbe <- qtde * 5,00
+
+      caso 8
+         escreval ("Digite a qunatidade: ")
+         leia (qtde)
+         vbe <- qtde * 3,00
+
+      outrocaso
+         se (opb<0) ou (opb>8) entao
+            escreval ("Opção invalida)
+         fimse
+
+      fimescolha
+
+      limpatela
+
+      se (opb <> 0) entao
+         ac_vbe <- ac_vbe + vbe
+      fimse
+
+   ate (opb = 0)
+
+   limpatela
+
+fimprocedimento
 
 Var
-   op,opl,opa,opb,qtde : inteiro
+   op,opl,opa,qtde : inteiro
    vla : real
    vac : real
    vbe : real
@@ -9,111 +269,38 @@ Var
    ac_vac : real
    ac_vbe : real
 
+
 Inicio
    repita
-      escreval ("====================================")
-      escreval ("MENU PRINCIPA")
-      escreval ("1. LANCHE")
-      escreval ("2. ACOMPANHAMENTO")
-      escreval ("3. BEBIDAS")
-      escreval ("0. SAIR")
-      escreval ("====================================")
-      escreva("Digite a opção desejada: ")
-      leia(op)
 
-      limpatela
-      
+      //Exibe o menu principal
+      menuPrincipal
+
       escolha(op)
-         caso 1
+      caso 1
 
-              repita
+         menuLanche
 
-               escreval ("====================================")
-               escreval ("LANCHE")
-               escreval ("1. HOT DOG : 14,00")
-               escreval ("2. BIG HOT DOG : 19,00")
-               escreval ("3. X-BACON : 24,00")
-               escreval ("4. X-SALADA : 20,00")
-               escreval ("5. X-TUDO : 25,00")
-               escreval ("6. X-BORGUER : 17,00")
-               escreval ("7. X-FRANGO : 28,00")
-               escreval ("8. A MODA DA CASA : 34,00")
-               escreval ("0. VOLTAR AO MENU PRINCIPAL")
-               escreval ("====================================")
-               escreva("Digite sua opção: ")
-               leia(opl)
-               limpatela
+      caso 2
 
-               escolha(opl)
-                  caso 1
-                  escreva("Digite a quantidade: ")
-                  leia(qtde)
-                  valor <- qtde * 14.00
-                  
-                  caso 2
-                  escreva("Digite a quantidade: ")
-                  leia(qtde)
-                  valor <- qtde * 19.00
+         menuAcompanhamento
 
-                  caso 3
-                  escreva("Digite a quantidade: ")
-                  leia(qtde)
-                  valor <- qtde * 24.00
-                  
-                  caso 4
-                  escreva("Digite a quantidade: ")
-                  leia(qtde)
-                  valor <- qtde * 20.00
-                  
-                  caso 5
-                  escreva("Digite a quantidade: ")
-                  leia(qtde)
-                  valor <- qtde * 25.00
-                  
-                  caso 6
-                  escreva("Digite a quantidade: ")
-                  leia(qtde)
-                  valor <- qtde * 17.00
-                  
-                  caso 7
-                  escreva("Digite a quantidade: ")
-                  leia(qtde)
-                  valor <- qtde * 28.00
-                  
-                  caso 8
-                  escreva("Digite a quantidade: ")
-                  leia(qtde)
-                  valor <- qtde * 34.00
+      caso 3
 
-                  outrocaso
-                     se(opl<0) ou (opl>8) entao
-                        escreval("Opção invalida")
-                     fimse
-         caso 2
-         
+         menuBebida
 
-                  
-               fimescolha
 
-               se (opl <> 0) entao
-                  ac_vl <- ac_vl + valor
-               fimse
-               
-              ate (opl = 0)
-              
-              limpatela
-              
-            outrocaso
-               se(op<0) ou (op>3) entao
-                  escreval("Opção invalida")
-               fimse
-         fimescolha
+      outrocaso
+         se(op<0) ou (op>3) entao
+            escreval("Opção invalida")
+         fimse
+      fimescolha
 
-        
+
    ate (op = 0)
 
-   escreva("O valor do seu pedido e: ")
-   escreval(ac_vl)
+   escreva("O valor do seu pedido e: R$")
+   escreval(ac_vla+ac_vac+ac_vbe)
 
 
 Fimalgoritmo
