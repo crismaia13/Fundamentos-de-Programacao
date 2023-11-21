@@ -7,6 +7,7 @@ Algoritmo "semnome"
 procedimento menuPrincipal()
 var
 
+
 inicio
    escreval ("====================================")
    escreval ("MENU PRINCIPA")
@@ -22,9 +23,12 @@ inicio
 
 fimprocedimento
 
+//
 procedimento menuLanche
-var
 
+var
+   opl:inteiro
+   vla : real
 inicio
    repita
 
@@ -104,9 +108,12 @@ inicio
 
 fimprocedimento
 
+//
 procedimento menuAcompanhamento
-var
 
+var
+   opa:inteiro
+   vac : real
 inicio
    repita
 
@@ -179,9 +186,12 @@ inicio
 
 fimprocedimento
 
+//
 procedimento menuBebida
+
 var
    opb:inteiro
+   vbe : real
 inicio
    repita
 
@@ -261,10 +271,8 @@ inicio
 fimprocedimento
 
 Var
-   op,opl,opa,qtde : inteiro
-   vla : real
-   vac : real
-   vbe : real
+   op     :inteiro
+   qtde   : inteiro
    ac_vla : real
    ac_vac : real
    ac_vbe : real
