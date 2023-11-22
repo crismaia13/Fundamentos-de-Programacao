@@ -4,9 +4,9 @@ Algoritmo "semnome"
 // Aluna        : Cristina Maia de Faria
 // RA           : 5112928
 
-procedimento menuPrincipal()
-var
 
+procedimento menuPrincipal
+var
 
 inicio
    escreval ("====================================")
@@ -23,11 +23,12 @@ inicio
 
 fimprocedimento
 
-//
+
 procedimento menuLanche
 
 var
-   opl:inteiro
+   //Variaveis locais
+   opl : inteiro
    vla : real
 inicio
    repita
@@ -89,6 +90,8 @@ inicio
          leia(qtde)
          vla <- qtde * 34,00
 
+         limpatela
+
       outrocaso
          se(opl<0) ou (opl>8) entao
             escreval("Opção invalida")
@@ -96,23 +99,20 @@ inicio
 
       fimescolha
 
-      limpatela
-
       se (opl <> 0) entao
          ac_vla <- ac_vla + vla
       fimse
 
    ate (opl = 0)
 
-
-
 fimprocedimento
 
-//
+
 procedimento menuAcompanhamento
 
 var
-   opa:inteiro
+   //Variaveis locais
+   opa : inteiro
    vac : real
 inicio
    repita
@@ -126,6 +126,7 @@ inicio
       escreval ("5. NACHOS : 20,00")
       escreval ("6. VINAGRETE : 6,00")
       escreval ("7. MINI STEAK : 12,00")
+      escreval ("0. VOLTAR AO MENU PRINCIPAL")
       escreval ("====================================")
       escreval ("Digite a sua opção: ")
       leia (opa)
@@ -167,6 +168,8 @@ inicio
          leia(qtde)
          vac <- qtde * 12,00
 
+         limpatela
+
       outrocaso
          se(opa<0) ou (opa>7) entao
             escreval("Opção invalida")
@@ -174,23 +177,20 @@ inicio
 
       fimescolha
 
-      limpatela
-
       se (opa <> 0) entao
          ac_vac <- ac_vac + vac
       fimse
 
    ate (opa = 0)
 
-
-
 fimprocedimento
 
-//
+
 procedimento menuBebida
 
 var
-   opb:inteiro
+   //Variaveis locais
+   opb : inteiro
    vbe : real
 inicio
    repita
@@ -205,6 +205,7 @@ inicio
       escreval ("6. SUCO SPRES LARNAJA : 4,00")
       escreval ("7. COCA-COLA : 5,00")
       escreval ("8. ÁGUA COM GÁS CRYSTAL: 3,00")
+      escreval ("0. VOLTAR AO MENU PRINCIPAL")
       escreval ("====================================")
       escreval ("Digite a sua opção: ")
       leia (opb)
@@ -251,14 +252,13 @@ inicio
          leia (qtde)
          vbe <- qtde * 3,00
 
+         limpatela
+
       outrocaso
          se (opb<0) ou (opb>8) entao
-            escreval ("Opção invalida)
+            escreval ("Opção invalida")
          fimse
-
       fimescolha
-
-      limpatela
 
       se (opb <> 0) entao
          ac_vbe <- ac_vbe + vbe
@@ -270,14 +270,14 @@ inicio
 
 fimprocedimento
 
+
 Var
-   op     :inteiro
+   //Variaveis globais
+   op     : inteiro
    qtde   : inteiro
    ac_vla : real
    ac_vac : real
    ac_vbe : real
-
-
 Inicio
    repita
 
@@ -287,16 +287,18 @@ Inicio
       escolha(op)
       caso 1
 
+         //Exibe e processa o menu de lanches com acumulativo em ac_vla
          menuLanche
 
       caso 2
 
+         //Exibe e processa o menu de lanches com acumulativo em ac_vac
          menuAcompanhamento
 
       caso 3
 
+         //Exibe e processa o menu de lanches com acumulativo em ac_vbe
          menuBebida
-
 
       outrocaso
          se(op<0) ou (op>3) entao
@@ -304,11 +306,11 @@ Inicio
          fimse
       fimescolha
 
-
    ate (op = 0)
 
-   escreva("O valor do seu pedido e: R$")
+   //Soma todos os valores e exibe o total do pedido contendo
+   //lanches/acompanhamentos/bedidas
+   escreva("O valor do seu pedido total e: R$")
    escreval(ac_vla+ac_vac+ac_vbe)
-
 
 Fimalgoritmo
